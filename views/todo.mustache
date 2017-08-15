@@ -18,6 +18,7 @@
 
       .todo-list li {
         margin-bottom: 1rem;
+        list-style-type: none;
       }
     </style>
   </head>
@@ -26,6 +27,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
+          <h1>{{title}}</h1>
+          <ul class = "todo-list">
+          {{#items}}
+          <li>{{#done}} <input type="checkbox" name="" value="" checked><s>{{text}}</s>{{/done}}</li>
+          <li>{{^done}} <input type="checkbox" name="" value="">{{text}}{{/done}}</li>
+          {{/items}}
+        </ul>
           <!-- TODO write your HTML/Mustache here -->
         </div>
       </div>
